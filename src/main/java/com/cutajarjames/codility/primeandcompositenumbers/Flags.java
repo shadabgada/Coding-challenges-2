@@ -29,7 +29,7 @@ public class Flags {
     }
 
     private boolean canPlaceFlags(int[] peaks, int flagsToPlace) {
-        int currentPosition = 1 - flagsToPlace;
+        int currentPosition = 1 - flagsToPlace; // peaks can only begin with index 1
         for (int i = 0; i < flagsToPlace; i++) {
             if (currentPosition + flagsToPlace > peaks.length - 1)
                 return false;

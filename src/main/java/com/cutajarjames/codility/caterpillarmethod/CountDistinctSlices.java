@@ -13,16 +13,16 @@ public class CountDistinctSlices {
         int totalSlices = 0;
         boolean[] inCurrentSlice = new boolean[M + 1];
         Arrays.fill(inCurrentSlice, false);
-        int head = 0;
-        for (int tail = 0; tail < A.length; tail++) {
-            while (head < A.length && !inCurrentSlice[A[head]]) {
-                inCurrentSlice[A[head]] = true;
-                totalSlices += (head - tail) + 1;
-                head += 1;
+        int front = 0;
+        for (int back = 0; back < A.length; back++) {
+            while (front < A.length && !inCurrentSlice[A[front]]) {
+                inCurrentSlice[A[front]] = true;
+                totalSlices += (front - back) + 1;
+                front += 1;
                 if (totalSlices > 1000000000)
                     totalSlices = 1000000000;
             }
-            inCurrentSlice[A[tail]] = false;
+            inCurrentSlice[A[back]] = false;
         }
         return totalSlices;
     }

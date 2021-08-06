@@ -6,6 +6,7 @@ package com.cutajarjames.codility.greedy;
  * This is marked as PAINLESS difficulty
  */
 public class TieRopes {
+
     public int solution(int K, int[] A) {
         int count = 0;
         int ropeLength = 0;
@@ -23,3 +24,6 @@ public class TieRopes {
         System.out.println(new TieRopes().solution(4, new int[]{1, 2, 3, 4, 1, 1, 3}));
     }
 }
+/*
+O(N)
+ */

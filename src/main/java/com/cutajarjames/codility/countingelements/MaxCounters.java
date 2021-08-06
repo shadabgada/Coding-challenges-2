@@ -17,7 +17,7 @@ public class MaxCounters {
             int x = i - 1;
             if (i > N) start_line = current_max;
             else if (counters[x] < start_line) counters[x] = start_line + 1;
-            else counters[x] += 1;
+            else counters[x] += 1; // i.e. greater than start_line
             if (i <= N && counters[x] > current_max) current_max = counters[x];
         }
         for (int i = 0; i < counters.length; i++)

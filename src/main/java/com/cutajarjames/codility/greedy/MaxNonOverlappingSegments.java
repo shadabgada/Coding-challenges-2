@@ -26,3 +26,7 @@ public class MaxNonOverlappingSegments {
     }
 
 }
+
+/*
+O(N)
+ */

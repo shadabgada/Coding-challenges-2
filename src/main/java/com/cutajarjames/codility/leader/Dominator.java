@@ -8,18 +8,20 @@ package com.cutajarjames.codility.leader;
 
 public class Dominator {
     public int solution(int[] A) {
-        int consecutiveSize = 0;
+        int counter = 0;
         int candidate = 0;
         for (int item : A) {
-            if (consecutiveSize == 0) {
+            if (counter == 0) {
                 candidate = item;
-                consecutiveSize += 1;
+                counter += 1;
             } else if (candidate == item) {
-                consecutiveSize += 1;
+                counter += 1;
             } else {
-                consecutiveSize -= 1;
+                counter -= 1;
             }
         }
+
+        //TILL NOW WE HAVE MOST FREQUENT CANDIDATE, But we need to find its occurence
 
         int occurrence = 0;
         int index = 0;
@@ -38,3 +40,10 @@ public class Dominator {
     }
 
 }
+/*
+3, 0, 1, 1, 4, 1, 1
+
+candida:1
+counter:3
+
+ */
